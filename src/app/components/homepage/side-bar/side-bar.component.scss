@@ -2,7 +2,7 @@
 color:  #ff385c  !important;
 
 }
-a{
+.navbar-nav li a{
   color: black;
 
   &:hover{
@@ -14,6 +14,25 @@ a{
 }
 
 }
-.side{
- min-height: 650px;
+
+@media (min-width : 992px) {
+  .offcanvas {
+    display: block;
+    position        : relative;
+    background      : none;
+    border          : none;
+    justify-content : end;
+  }
 }
+@media (max-width : 992px) {
+  .offcanvas {
+    width : 250px !important;
+  }
+  .offcanvas-start-lg {
+    top          : 0;
+    left         : 0;
+    border-right : 1px solid rgba(0, 0, 0, .2);
+    transform    : translateX(-100%);
+  }
+}
+
