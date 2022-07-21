@@ -1,4 +1,10 @@
 <!DOCTYPE html>
-<app-header></app-header>
-<app-home></app-home>
-<app-side-bar></app-side-bar>
+<div class="container-fluid">
+  <div class="row">
+    <app-side-bar class="col-3 shadow"> </app-side-bar>
+    <div class="col-9">
+      <app-header> </app-header>
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>

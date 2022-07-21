@@ -1,0 +1,19 @@
+.colorbase{
+color:  #ff385c  !important;
+
+}
+a{
+  color: black;
+
+  &:hover{
+  color:  #ff385c  ;
+
+} &:active {
+  color:  #ff385c !important ;
+
+}
+
+}
+.side{
+ min-height: 650px;
+}
