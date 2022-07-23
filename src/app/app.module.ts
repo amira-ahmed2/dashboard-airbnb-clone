@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/homepage/header/header.component';
 import { HomeComponent } from './components/homepage/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { UserComponent } from './components/user/user/user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     HeaderComponent,
     HomeComponent,
     NotfoundComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
