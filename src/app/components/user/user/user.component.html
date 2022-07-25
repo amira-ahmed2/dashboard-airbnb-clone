@@ -26,12 +26,10 @@
                   <li>
 <a>                    <button class="btn btn" (click)="edituser(user.id)" >Edit</button>
 </a>
-                    <!-- <a (click)="edituser(user.id)"  routerLinkActive="active">Edit</a> -->
                   </li>
                   <li>
-                    <!-- <a routerLink="/users" (click)="deleteproduct(user.id)" routerLinkActive="active">delete</a> -->
 
-                    <a routerLink="/users" ng-click="deleteSth(bfunc.$key=bfunc.Name)" routerLinkActive="active">delete</a>
+                    <a routerLink="/users" (click)="onClickRemove()" routerLinkActive="active">delete</a>
                   </li>
                 </ul>
               </li>

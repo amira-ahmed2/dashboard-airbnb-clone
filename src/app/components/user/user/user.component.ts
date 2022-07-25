@@ -23,13 +23,10 @@ key:number=0
 
   }
 // start delete user
-  deleteSth(key:any){
-    if(confirm("do is delete this user?")){
-    this.db.database.ref().child('/BFunctions/'+key+'/').remove()
-    console.log(key)
-  }else{
-    alert("you cancel delete")
-  }
+
+onClickRemove() {
+  this.array.splice(0,1);
+  return this.array;
 }
 // end delete
 // start go to page updata

@@ -18,14 +18,10 @@ constructor(private db:AngularFireDatabase) {
 
 
   }
-
-  deleteSth(key:any){
-    if(confirm("do is delete this user?")){
-    this.db.database.ref().child('/BFunctions/'+key+'/').remove()
-    console.log(key)
-  }else{
-    alert("you cancel delete")
+   onClickRemove() {
+    this.array.splice(0,1);
+    return this.array;
   }
-}
+
 
 }

@@ -33,7 +33,7 @@
                     <a routerLink="/edit" routerLinkActive="active">Edit</a>
                   </li>
                   <li>
-                    <a routerLink="/presenter" ng-click="deleteSth(bfunc.$key=bfunc.Name)" routerLinkActive="active">delete</a>
+                    <a routerLink="/presenter" (click)="onClickRemove()" routerLinkActive="active">delete</a>
                   </li>
                 </ul>
               </li>
