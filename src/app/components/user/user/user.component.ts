@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-user',
@@ -6,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-array:any
-  constructor() { 
+array:any|[]
+ 
+  constructor(db:AngularFireDatabase) { 
+    db.list('/users').valueChanges().subscribe(data=>{this.array=data})
 
-    this.array=[
-      {name:"mostafa", nationalID:"111111111",mobile:"01015981398", email:"hfg@gmail.ccom",password:"123456",company:"pharco",age:"25",address:"cairo"},
-      {name:"ahmed", nationalID:"22222222",mobile:"01154548555", email:"ooo@gmail.ccom",password:"52148",company:"bbc",age:"35",address:"alex"},
-      {name:"mohamed", nationalID:"44444444",mobile:"015447855", email:"moh@gmail.ccom",password:"95874",company:"google",age:"30",address:"Giza"},
-    ]
+    // this.array=[
+    //   {name:"mostafa", nationalID:"111111111",mobile:"01015981398", email:"hfg@gmail.ccom",password:"123456",company:"pharco",age:"25",address:"cairo"},
+    //   {name:"ahmed", nationalID:"22222222",mobile:"01154548555", email:"ooo@gmail.ccom",password:"52148",company:"bbc",age:"35",address:"alex"},
+    //   {name:"mohamed", nationalID:"44444444",mobile:"015447855", email:"moh@gmail.ccom",password:"95874",company:"google",age:"30",address:"Giza"},
+    // ]
     
   }
 
