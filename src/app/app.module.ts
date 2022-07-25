@@ -13,6 +13,7 @@ import { HomeComponent } from './components/homepage/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { UserComponent } from './components/user/user/user.component';
+import { PresentersComponent } from './components/presenters/presenters.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { UserComponent } from './components/user/user/user.component';
     HomeComponent,
     NotfoundComponent,
     UserComponent,
+    PresentersComponent,
   ],
   imports: [
     BrowserModule,

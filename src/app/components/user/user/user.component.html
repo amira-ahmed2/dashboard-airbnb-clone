@@ -1,22 +1,16 @@
 <div class="container-fluid">
     <div class="row ">
-<div class="card m-5 bg-primary text-white" *ngFor="let user of array" style="width:18rem;">
-    <!-- <img [src]="" class="card-img-top" alt="..."> -->
+<div class="card m-5 bg-secondary text-white" *ngFor="let user of array" style="width:18rem;">
+    
     <div class="card-body">
-        <h5 class="card-title">name:{{user.name}}</h5>
-        <p class="card-text">nationalID:{{user.nationalID}}</p>
+        <p class="card-title">name:{{user.name}}</p>
         <p class="card-text">mobile:{{user.mobile}}</p>
         <p class="card-text">email:{{user.email}}</p>
         <p class="card-text">password:{{user.password}}</p>
-        <p class="card-text">company:{{user.company}}</p>
         <p class="card-text">age:{{user.age}}</p>
-        <p class="card-text">address:{{user.address}}</p>
+         
     </div>
-    <!-- <div class="btn-group">
-        <button class="btn btn-danger" (click)=" prevbtn()" [disabled]="currentprouductID==arrayofreceivedIDonly[0]">Previous</button>
-        <button class="btn btn-primary" (click)=" goBack() ">Back</button>
-        <button class="btn btn-success" (click)=" nextbtn()" [disabled]="currentprouductID==arrayofreceivedIDonly[arrayofreceivedIDonly.length-1]">Next</button>
-    </div> -->
+     
 
 </div>
 </div>
