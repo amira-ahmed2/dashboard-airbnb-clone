@@ -1,17 +1,47 @@
 <div class="container-fluid">
-    <div class="row ">
-<div class="card m-5 bg-secondary text-white" *ngFor="let user of array" style="width:18rem;">
-    
-    <div class="card-body">
-        <p class="card-title">name:{{user.name}}</p>
-        <p class="card-text">mobile:{{user.mobile}}</p>
-        <p class="card-text">email:{{user.email}}</p>
-        <p class="card-text">password:{{user.password}}</p>
-        <p class="card-text">age:{{user.age}}</p>
-         
-    </div>
-     
+  <div class="row">
+    <div
+      class="card m-5 text-black cards shadow"
+      *ngFor="let user of array"
+      style="width: 18rem"
+    >
+      <!-- <img [src]="" class="card-img-top" alt="..."> -->
+      <div class="card-body col-12 d-flex justify-content-between align-items-start">
 
-</div>
-</div>
+        <div class="col-9 me-5">
+          <p class="card-title">name:{{user.name}}</p>
+          <p class="card-text">mobile:{{user.mobile}}</p>
+          <p class="card-text">email:{{user.email}}</p>
+          <p class="card-text">password:{{user.password}}</p>
+          <p class="card-text">age:{{user.age}}</p>
+        </div>
+          <!-- dropdown -->
+          <div class="navs text-end col-2 ms-5" id="navigation">
+            <ul class="links">
+              <li class="dropdown">
+                <a href="#" class="trigger-drop">
+                  <i class="bi bi-list fs-3"></i
+                ></a>
+                <ul class="drop">
+                  <li>
+<a>                    <button class="btn btn" (click)="edituser(user.id)" >Edit</button>
+</a>
+                    <!-- <a (click)="edituser(user.id)"  routerLinkActive="active">Edit</a> -->
+                  </li>
+                  <li>
+                    <!-- <a routerLink="/users" (click)="deleteproduct(user.id)" routerLinkActive="active">delete</a> -->
+
+                    <a routerLink="/users" ng-click="deleteSth(bfunc.$key=bfunc.Name)" routerLinkActive="active">delete</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- end dropdown -->
+
+      </div>
+
+    </div>
+  </div>
 </div>

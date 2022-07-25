@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<form #prdform="ngForm" >
+  <div class="mb-3">
+    <label for="prdName" class="form-label">Product Name</label>
+
+    <input type="text"  class="form-control" name="prdName" id="prdName" [(ngModel)]="newprd.name" required pattern="[A-Za-z0-9]{3,10}" #prdname="ngModel" >
+
+
+
+  </div>
+
+
+  <div class="mb-3">
+    <label for="prdQuant" class="form-label">Password</label>
+    <input type="number" class="form-control" name="prdQuant" id="prdQuant" [(ngModel)]="newprd" required pattern="[0-9]{1,5}" #prdquantity="ngModel">
+
+  </div>
+
+  <div class="mb-3">
+    <label for="prdPrc" class="form-label">Age</label>
+    <input type="number" class="form-control" name="prdPrc" id="prdPrc" [(ngModel)]="newprd.age" required  #prdprice="ngModel">
+
+  </div>
+
+
+
+
+  <button type="submit" class="btn btn-success" [disabled]="prdform.invalid">Submit</button>
+</form>
+

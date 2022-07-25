@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import * as firebase from 'firebase/compat';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -8,21 +10,33 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 })
 export class UserComponent implements OnInit {
 array:any|[]
- 
-  constructor(db:AngularFireDatabase) { 
+key:number=0
+
+  constructor(private db:AngularFireDatabase,private router:Router) {
     db.list('/users').valueChanges().subscribe(data=>{this.array=data})
 
-    // this.array=[
-    //   {name:"mostafa", nationalID:"111111111",mobile:"01015981398", email:"hfg@gmail.ccom",password:"123456",company:"pharco",age:"25",address:"cairo"},
-    //   {name:"ahmed", nationalID:"22222222",mobile:"01154548555", email:"ooo@gmail.ccom",password:"52148",company:"bbc",age:"35",address:"alex"},
-    //   {name:"mohamed", nationalID:"44444444",mobile:"015447855", email:"moh@gmail.ccom",password:"95874",company:"google",age:"30",address:"Giza"},
-    // ]
-    
+
   }
 
   ngOnInit(): void {
 
-    
+
   }
+// start delete user
+  deleteSth(key:any){
+    if(confirm("do is delete this user?")){
+    this.db.database.ref().child('/BFunctions/'+key+'/').remove()
+    console.log(key)
+  }else{
+    alert("you cancel delete")
+  }
+}
+// end delete
+// start go to page updata
+edituser(id:number){
+  this.router.navigate(['./users',id])
+}
+// end go to page updata
+
 
 }
