@@ -2,7 +2,8 @@
 color:  #ff385c  !important;
 
 }
-#menu a{
+
+.navbars ul li a{
   color: black;
 
   &:hover{
@@ -11,7 +12,7 @@ color:  #ff385c  !important;
 }
 
 }
-.navbars.active{
+.navbars ul li a.active{
   color:  #ff385c !important ;
   background-color: transparent !important;
 }
