@@ -15,6 +15,9 @@ import { UserComponent } from './components/user/user/user.component';
 import { PresentersComponent } from './components/presenters/presenters.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { EditdataComponent } from './components/editdata/editdata.component';
+import { FirstpageComponent } from './components/firstpage/firstpage.component';
+import { AdminsComponent } from './components/admins/admins.component';
+import { NewAdminComponent } from './components/new-admin/new-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,9 @@ import { EditdataComponent } from './components/editdata/editdata.component';
     PresentersComponent,
     MainlayoutComponent,
     EditdataComponent,
+    FirstpageComponent,
+    AdminsComponent,
+    NewAdminComponent,
 
 
   ],

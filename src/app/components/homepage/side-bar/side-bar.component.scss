@@ -2,17 +2,18 @@
 color:  #ff385c  !important;
 
 }
-.navbar-nav li a{
+#menu a{
   color: black;
 
   &:hover{
   color:  #ff385c  ;
 
-} &:active {
-  color:  #ff385c !important ;
-
 }
 
+}
+.nav-pills .nav-link.active{
+  color:  #ff385c !important ;
+  background-color: transparent !important;
 }
 
 @media (min-width : 992px) {
