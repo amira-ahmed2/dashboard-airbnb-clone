@@ -2,17 +2,19 @@
 color:  #ff385c  !important;
 
 }
-.navbar-nav li a{
+
+.navbars ul li a{
   color: black;
 
   &:hover{
   color:  #ff385c  ;
 
-} &:active {
-  color:  #ff385c !important ;
-
 }
 
+}
+.navbars ul li a.active{
+  color:  #ff385c !important ;
+  background-color: transparent !important;
 }
 
 @media (min-width : 992px) {
