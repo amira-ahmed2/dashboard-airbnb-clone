@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {AngularFireModule} from '@angular/fire/compat';
-import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
+// import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
 import { environment } from './../environments/environment';
-
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './components/homepage/side-bar/side-bar.component';
@@ -18,6 +18,8 @@ import { EditdataComponent } from './components/editdata/editdata.component';
 import { FirstpageComponent } from './components/firstpage/firstpage.component';
 import { AdminsComponent } from './components/admins/admins.component';
 import { NewAdminComponent } from './components/new-admin/new-admin.component';
+import { UserUpdatesComponent } from './components/userUpdate/user-updates/user-updates.component';
+import { PresenterUpdateComponent } from './components/presenterUpdate/presenter-update/presenter-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { NewAdminComponent } from './components/new-admin/new-admin.component';
     FirstpageComponent,
     AdminsComponent,
     NewAdminComponent,
+    UserUpdatesComponent,
+    PresenterUpdateComponent,
 
 
   ],
@@ -41,7 +45,7 @@ import { NewAdminComponent } from './components/new-admin/new-admin.component';
     ReactiveFormsModule,
     FontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    AngularFirestoreModule,
 
 
   ],

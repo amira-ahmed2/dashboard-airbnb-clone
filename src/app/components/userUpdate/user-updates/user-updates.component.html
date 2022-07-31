@@ -1,0 +1,19 @@
+<form #prdform="ngForm">
+    <div class="mb-3">
+        <label for="prdName" class="form-label">Name</label>
+        <input type="text" class="form-control" value={{singleData.name}} name="prdName" id="prdName" #userName  required>
+    </div>
+    <div class="mb-3">
+        <label for="prdPrc" class="form-label">Age</label>
+        <input type="number" class="form-control" value={{singleData.age}} name="prdPrc" id="prdPrc" #userAge required>
+    </div>
+    <div class="mb-3">
+        <label for="prdPrc" class="form-label">Email</label>
+        <input type="email" class="form-control" value={{singleData.email}} name="prdPrc" id="prdPrc" #userMail required>
+    </div>
+    <div class="mb-3">
+        <label for="prdPrc" class="form-label">Mobile</label>
+        <input type="number" class="form-control" value={{singleData.mobile}} name="prdPrc" id="prdPrc" #userMob required>
+    </div>
+    <button type="submit" class="btn btn-success"(click)="updateUser({name:userName.value ,age:userAge.value ,email:userMail.value , mobile:userMob.value})" >Update</button>
+</form>

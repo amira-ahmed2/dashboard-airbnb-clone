@@ -24,12 +24,12 @@
                 ></a>
                 <ul class="drop">
                   <li>
-<a>                    <button class="btn btn" (click)="edituser(user.id)" >Edit</button>
+<a>                    <button class="btn btn" routerLink="/edit_user" (click)="edituser(user.eventId)" >Edit</button>
 </a>
                   </li>
                   <li>
 
-                    <a routerLink="/users" (click)="onClickRemove()" routerLinkActive="active">delete</a>
+                    <a routerLink="/users" (click)="onClickRemove(user.eventId)" routerLinkActive="active">delete</a>
                   </li>
                 </ul>
               </li>
