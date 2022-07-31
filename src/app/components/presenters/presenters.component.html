@@ -25,15 +25,15 @@
           <div class="navs text-end col-2 ms-5" id="navigation">
             <ul class="links">
               <li class="dropdown">
-                <a href="#" class="trigger-drop">
+                <a href="presenter" class="trigger-drop">
                   <i class="bi bi-list fs-3"></i
                 ></a>
                 <ul class="drop">
                   <li>
-                    <a routerLink="/edit" routerLinkActive="active">Edit</a>
+                    <a routerLink="/edit" (click)="updateData(presenter.eventId)" routerLinkActive="active">Edit</a>
                   </li>
                   <li>
-                    <a routerLink="/presenter" (click)="onClickRemove()" routerLinkActive="active">delete</a>
+                    <a routerLink="/presenter" (click)="onClickRemove(presenter.eventId)" routerLinkActive="active">delete</a>
                   </li>
                 </ul>
               </li>

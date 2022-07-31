@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyCGgPn3LSsUxFRQfb4hMYbfufPNyxq5xHo",
-    authDomain: "signup-98abd.firebaseapp.com",
-    databaseURL: "https://signup-98abd-default-rtdb.firebaseio.com",
-    projectId: "signup-98abd",
-    storageBucket: "signup-98abd.appspot.com",
-    messagingSenderId: "950190237737",
-    appId: "1:950190237737:web:c6ff4bf7593ee8eb1d1438"}
+    apiKey: "AIzaSyDc4pQ7M49mqJ4m9fa_EdCH_uUDSl00jVI",
+    authDomain: "airbnb-f88a9.firebaseapp.com",
+    projectId: "airbnb-f88a9",
+    storageBucket: "airbnb-f88a9.appspot.com",
+    messagingSenderId: "334551186520",
+    appId: "1:334551186520:web:1527e4756485e8561a5e2d"}
 };
 
 /*

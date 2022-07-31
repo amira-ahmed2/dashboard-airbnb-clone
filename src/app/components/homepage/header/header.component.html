@@ -15,31 +15,102 @@
         />
       </form>
     </div>
-<div class=""></div>
+
     <div class="col-lg-5 d-flex justify-content-evenly">
 
-      <button
-        type="button"
-        class="buttonAdd btn"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@getbootstrap"
-        routerLink="newAdmin/id">Add Admin +</button>
+      <!-- Modal to add new admin-->
+      <div class="">
+        <button
+          type="button"
+          class="buttonAdd btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever="@getbootstrap"
+          >Add Admin +</button>
+                    
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New Admin</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <!-- start form -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Email:</label>
+                      <input type="text"  class="form-control" id="recipient-name" #us>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Password:</label>
+                      <input type="password"  class="form-control" id="recipient-name" #pss>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="buttonAdd btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@getbootstrap" (click)="addAdmin(us.value , pss.value)">Add +</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- Example split danger button -->
-<div class="btn-group align-items-center justify-content-end ">
-  <!-- <img src="./assets/download.png" class="rounded-5" alt="#"
-        id="dropdownMenuButton1"> -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-        </svg>
-    <i class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></i>
-  <ul class="dropdown-menu ull">
-    <li><a class="dropdown-item" href="#">Log out</a></li>
-  </ul>
-</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        <!-- Example split danger button -->
+        <div class="btn-group align-items-center justify-content-end ">
+          <!-- <img src="./assets/download.png" class="rounded-5" alt="#"
+                id="dropdownMenuButton1"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+            <i class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></i>
+          <ul class="dropdown-menu ull">
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
     </div>
   </div>
 </nav>
