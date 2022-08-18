@@ -12,7 +12,7 @@ import { EditIdService } from 'src/app/services/edit-id.service';
 export class PresentersComponent implements OnInit {
 array:any|[]
 constructor(private db:AngularFirestore,private updaeteServ :EditIdService) {
-  db.collection('/presenter').valueChanges({idField:'eventId'}).subscribe(data=>{this.array=data})
+  db.collection('/AskRequest').valueChanges({idField:'eventId'}).subscribe(data=>{this.array=data})
 
 
   }
@@ -21,10 +21,22 @@ constructor(private db:AngularFirestore,private updaeteServ :EditIdService) {
 
 
   }
-   onClickRemove(key :any) {
+   onClickRemove(key :any, data:any) {
     if(confirm("do is delete this user?")){
-      this.db.collection('presenters').doc( key).delete()
-      console.log(key)
+      
+
+      this.db.collection('/Rejected').add(data)
+      this.db.collection('AskRequest').doc( key).delete()
+    }else{
+      alert("you cancel delete")
+    }
+  }
+   onClickAccept(key :any, data:any) {
+    if(confirm("want accept this?")){
+      
+
+      this.db.collection('/Requests').add(data)
+      this.db.collection('AskRequest').doc( key).delete()
     }else{
       alert("you cancel delete")
     }
