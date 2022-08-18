@@ -20,6 +20,9 @@ import { AdminsComponent } from './components/admins/admins.component';
 import { NewAdminComponent } from './components/new-admin/new-admin.component';
 import { UserUpdatesComponent } from './components/userUpdate/user-updates/user-updates.component';
 import { PresenterUpdateComponent } from './components/presenterUpdate/presenter-update/presenter-update.component';
+import { RejectedDataComponent } from './components/rejected-data/rejected-data.component';
+import { AcceptedDataComponent } from './components/accepted-data/accepted-data.component';
+import { StatesComponent } from './components/states/states.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,9 @@ import { PresenterUpdateComponent } from './components/presenterUpdate/presenter
     NewAdminComponent,
     UserUpdatesComponent,
     PresenterUpdateComponent,
+    RejectedDataComponent,
+    AcceptedDataComponent,
+    StatesComponent,
 
 
   ],
