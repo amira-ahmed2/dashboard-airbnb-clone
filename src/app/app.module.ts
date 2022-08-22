@@ -23,13 +23,7 @@ import { PresenterUpdateComponent } from './components/presenterUpdate/presenter
 import { RejectedDataComponent } from './components/rejected-data/rejected-data.component';
 import { AcceptedDataComponent } from './components/accepted-data/accepted-data.component';
 import { StatesComponent } from './components/states/states.component';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-  
-import { AppComponent } from './app.component';
-import { ChartsModule } from 'ng2-charts';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +42,7 @@ import { ChartsModule } from 'ng2-charts';
     RejectedDataComponent,
     AcceptedDataComponent,
     StatesComponent,
-    AppComponent
+ 
 
 
   ],
@@ -60,10 +54,7 @@ import { ChartsModule } from 'ng2-charts';
     FontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-      BrowserModule, 
-    FormsModule, 
-    ChartsModule
-
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
